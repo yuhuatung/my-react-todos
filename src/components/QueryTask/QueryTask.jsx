@@ -32,8 +32,8 @@ class ConnectToDeleteLists extends React.Component {
         //先排序
         let contacts = this.state.searchList;
         this.props.data
-            .sort((f, s) => { return f.important < s.important ? -1 : 1 })
-            .sort((f, s) => { return f.complete > s.complete ? 1 : -1 })
+            .sort((f, s) => { return f.id < s.id ? 1 : -1 })
+            .sort((f, s) => { return f.important < s.important ? 1 : -1 })
         //算次數
         let todoCount = 0
         let QueryLists

@@ -6,8 +6,8 @@ class ConnectToDeleteLists extends React.Component {
     render() {
         //先排序
         this.props.data
-            .sort((f, s) => { return f.important < s.important ? -1 : 1 })
-            .sort((f, s) => { return f.complete > s.complete ? 1 : -1 })
+            .sort((f, s) => { return f.id < s.id ? 1 : -1 })
+            .sort((f, s) => { return f.important < s.important ? 1 : -1 })
         console.log(this.props.data)
         //算次數
         let todoCount = 0
